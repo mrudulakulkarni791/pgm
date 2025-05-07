@@ -1,0 +1,17 @@
+int buzzerPin = 2;
+
+void setup() {
+  // Nothing to setup for this example
+}
+
+void loop() {
+  // Play the melody
+tone(2, 3000, 500), delay (1000);
+tone(2, 3100, 500), delay (1000);
+tone(2, 3200, 500), delay (1000);
+tone(2, 3300, 500), delay (1000);
+tone(2, 3400, 500), delay (1000);
+tone(2, 3500, 500), delay (1000);
+tone(2, 3600, 500), delay (1000);
+tone(2, 3700, 500), delay (1000) ; // Wait 1 second before repeating
+}

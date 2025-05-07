@@ -1,0 +1,41 @@
+int red = 10;
+int yellow = 9;
+int green = 8;
+int counter=0;
+void setup() {
+pinMode(red, OUTPUT);
+ pinMode(yellow, OUTPUT);
+ pinMode(green, OUTPUT);
+}
+void loop()
+{
+ changeLights();
+ delay(100);
+
+}
+void changeLights(){
+ if(counter<100)
+ {
+ digitalWrite(yellow, HIGH);
+ digitalWrite(red, LOW);
+ digitalWrite(green, LOW);
+ delay(50);
+ }
+ else if(counter>100 && counter<200)
+ {
+ digitalWrite(red, HIGH);
+ digitalWrite(yellow, LOW);
+ digitalWrite(green, LOW);
+ delay(50);
+ }
+ else if (counter>200 && counter<500)
+ {
+ digitalWrite(green, HIGH);
+ digitalWrite(red, LOW);
+ digitalWrite(yellow, LOW);
+ delay(50);
+ counter=0;
+ }
+
+ counter=counter+50;
+}
